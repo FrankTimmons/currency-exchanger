@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import ExchangeRequest from './exchange-request.js';
 
-function getElements(response, currency){
+function getElements(response, currency, USD){
   let currencyExists = checkCurrency(response, currency);
   if (response.result == 'success'){
     $('.errorTest').text(`The call was a ${response.result}`);
@@ -12,9 +12,10 @@ function getElements(response, currency){
     $('.errorTest').text(`There was an error: ${response}`);
   }
   if (currencyExists){
-    console.log('exists');
+    let convertedCurrency = response.conversion_rates[currency] * USD;
+    $('#convertedCurrency').text(`${USD} USD is ${convertedCurrency} ${currency}`);
   } else {
-    console.log('dont');
+    $('#convertedCurrency').text(`${currency} is not a valid currency`);
   }
 }
 
@@ -29,9 +30,9 @@ function checkCurrency(response, currency){
   return currencyExist;
 }
 
-async function makeApiCall(currency) {
+async function makeApiCall(currency, USD) {
   const response = await ExchangeRequest.getExchange();
-  getElements(response, currency);
+  getElements(response, currency, USD);
 }
 
 $(document).ready(function(){
@@ -41,5 +42,6 @@ $(document).ready(function(){
 $('form#currencyConverter').submit(function(event) {
   event.preventDefault();
   let currency = ($('#currency').val()).toUpperCase();
-  makeApiCall(currency);   
+  let USD = parseInt($('#USD').val());
+  makeApiCall(currency, USD);   
 });
