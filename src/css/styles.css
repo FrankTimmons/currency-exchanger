@@ -1,44 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
 body {
   background-color: rgb(225, 241, 225);
+  
 }
 
-.header {
+h3 {
   text-align: center;
-  font-size: 50px;
   font-weight: 900;
-  padding-top: 13px;
-  height: 100px;
-  background-color: rgb(169, 197, 169);
-  color: rgb(225, 241, 225);
-}
-
-#currencyConverter {
-  height: 80px;
-  font-weight: bold;
-  border-radius: 6px;
-  color: rgb(233, 184, 94);
-  padding: 10px;
-  padding-bottom: 5px;
-  background-color: rgb(241, 219, 177);
-  width: 80%;
-  margin: 10%;
-  display: block;
-}
-
-.outputBox {
-  text-align: center;
-  font-size: 20px;
-  height: 80px;
-  font-weight: 900;
-  border-radius: 6px;
-  color: rgb(233, 184, 94);
-  padding: 10px;
-  padding-bottom: 5px;
-  background-color: rgb(241, 219, 177);
-  width: 80%;
-  margin: 10%;
-  display: block;
+  font-family: 'Righteous', cursive;
 }
 
 input[type=text] {
@@ -90,5 +60,44 @@ img {
   bottom: 0px;
   width: 60%;
   height: 60%;
-  left: 20%;
+  left: 22%;
+}
+
+.header {
+  font-family: 'Righteous', cursive;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 900;
+  padding-top: 13px;
+  height: 100px;
+  background-color: rgb(169, 197, 169);
+  color: rgb(225, 241, 225);
+}
+
+#currencyConverter {
+  height: 130px;
+  font-weight: bold;
+  border-radius: 6px;
+  color: rgb(233, 184, 94);
+  padding: 10px;
+  padding-bottom: 5px;
+  background-color: rgb(241, 219, 177);
+  width: 80%;
+  margin: 10%;
+  display: block;
+}
+
+#outputBox {
+  text-align: center;
+  font-size: 20px;
+  height: 120px;
+  font-weight: 900;
+  border-radius: 6px;
+  color: rgb(233, 184, 94);
+  padding: 10px;
+  padding-bottom: 5px;
+  background-color: rgb(241, 219, 177);
+  width: 80%;
+  margin: 10%;
+  display: block;
 }
