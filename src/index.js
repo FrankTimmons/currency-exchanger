@@ -5,7 +5,11 @@ import './css/styles.css';
 import ExchangeRequest from './exchange-request.js';
 
 function getElements(response){
-  $('.errorTest').text(`There was an error: ${response}`);
+  if (response.result == 'success'){
+    $('.errorTest').text(`The call was a ${response.result}`);
+  } else {
+    $('.errorTest').text(`There was an error: ${response}`);
+  }
 }
 
 async function makeApiCall() {
