@@ -5,18 +5,18 @@ import './css/styles.css';
 import ExchangeRequest from './exchange-request.js';
 
 function getElements(response, currency, USD){
-  let currencyExists = checkCurrency(response, currency);
   if (response.result == 'success'){
+    let currencyExists = checkCurrency(response, currency);
     $('.errorTest').text(`The call was a ${response.result}`);
+    if (currencyExists){
+      let convertedCurrency = response.conversion_rates[currency] * USD;
+      $('#convertedCurrency').text(`${USD} USD is ${convertedCurrency} ${currency}`);
+    } else {
+      $('#convertedCurrency').text(`But ${currency} is not a valid currency`);
+    }
   } else {
     $('.errorTest').text(`There was an error: ${response}`);
-  }
-  if (currencyExists){
-    let convertedCurrency = response.conversion_rates[currency] * USD;
-    $('#convertedCurrency').text(`${USD} USD is ${convertedCurrency} ${currency}`);
-  } else {
-    $('#convertedCurrency').text(`${currency} is not a valid currency`);
-  }
+  } 
 }
 
 function checkCurrency(response, currency){
@@ -34,10 +34,6 @@ async function makeApiCall(currency, USD) {
   const response = await ExchangeRequest.getExchange();
   getElements(response, currency, USD);
 }
-
-$(document).ready(function(){
-
-});
 
 $('form#currencyConverter').submit(function(event) {
   event.preventDefault();
