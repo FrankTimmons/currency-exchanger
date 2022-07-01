@@ -5,14 +5,14 @@ import './css/styles.css';
 import ExchangeRequest from './exchange-request.js';
 
 function getElements(response){
-  console.log(response);
+  $('.errorTest').text(`There was an error: ${response}`);
 }
 
 async function makeApiCall() {
-  let response = await ExchangeRequest.getExchange();
+  const response = await ExchangeRequest.getExchange();
   getElements(response);
 }
 
 $(document).ready(function(){
   makeApiCall();
-})
+});
