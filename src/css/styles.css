@@ -75,7 +75,6 @@ img {
 }
 
 #currencyConverter {
-  height: 130px;
   font-weight: bold;
   border-radius: 6px;
   color: rgb(233, 184, 94);
@@ -83,6 +82,7 @@ img {
   padding-bottom: 5px;
   background-color: rgb(241, 219, 177);
   width: 80%;
+  height: auto;
   margin: 10%;
   display: block;
 }
@@ -90,7 +90,6 @@ img {
 #outputBox {
   text-align: center;
   font-size: 20px;
-  height: 120px;
   font-weight: 900;
   border-radius: 6px;
   color: rgb(233, 184, 94);
@@ -98,6 +97,7 @@ img {
   padding-bottom: 5px;
   background-color: rgb(241, 219, 177);
   width: 80%;
+  height: auto;
   margin: 10%;
   display: block;
 }
