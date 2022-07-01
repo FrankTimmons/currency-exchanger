@@ -20,9 +20,9 @@ This site allows you to inpput a certain amount of USD, then see that amount in 
 
 ## Setup/Installation Requirements
 
-* Clone this repository
-* Open the currency-exchanger directory
-* Open a terminal and run: code .
+* Clone this repository to your desktop in the terminal
+* cd into currency-exchanger directory
+* Run: code .
 * Run: npm install
 * Visit the [ExchangeRate-API](https://www.exchangerate-api.com/) site. Input your email address and click the "Get Free Key" button.
 * You'll be prompted to create an account with your email, first name and a password. Agree to the terms of use and click "Get Started!"
