@@ -1,12 +1,50 @@
+
 body {
   background-color: rgb(225, 241, 225);
 }
+
 .header {
   text-align: center;
   font-size: 50px;
   font-weight: 900;
   padding-top: 13px;
   height: 100px;
+  background-color: rgb(169, 197, 169);
+  color: rgb(225, 241, 225);
+}
+
+#currencyConverter {
+  font-weight: bold;
+  color: rgb(233, 184, 94);
+  padding: 10px;
+  padding-bottom: 5px;
+  background-color: rgb(241, 219, 177);
+  width: 40%;
+  margin: 5%;
+}
+
+input[type=text] {
+  width: 20%;
+  font-weight: bold;
+  border: 0px;
+  border-radius: 6px;
+  background-color: rgb(233, 184, 94);
+  color: rgb(233, 184, 94);
+}
+
+input[type=number] {
+  width: 40%;
+  font-weight: bold;
+  border: 0px;
+  border-radius: 6px;
+  background-color: rgb(233, 184, 94);
+  color: rgb(241, 219, 177);
+}
+
+button {
+  font-weight: bold;
+  border: 0px;
+  border-radius: 6px;
   background-color: rgb(169, 197, 169);
   color: rgb(225, 241, 225);
 }

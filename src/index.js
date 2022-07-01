@@ -10,7 +10,7 @@ function getElements(response, currency, USD){
     $('.errorTest').text(`The call was a ${response.result}`);
     if (currencyExists) {
       let convertedCurrency = response.conversion_rates[currency] * USD;
-      $('#convertedCurrency').text(`${USD} USD is ${convertedCurrency} ${currency}`);
+      $('#convertedCurrency').text(`${USD} USD is ${convertedCurrency.toFixed(2)} ${currency}`);
     } else {
       $('#convertedCurrency').text(`But ${currency} is not a valid currency`);
     }
