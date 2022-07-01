@@ -7,15 +7,15 @@ import ExchangeRequest from './exchange-request.js';
 function getElements(response, currency, USD){
   if (response.result == 'success'){
     let currencyExists = checkCurrency(response, currency);
-    $('.errorTest').text(`The call was a ${response.result}`);
+    $('.errorTest').text(`THE CALL WAS A ${response.result.toUpperCase()}`);
     if (currencyExists) {
       let convertedCurrency = response.conversion_rates[currency] * USD;
-      $('#convertedCurrency').text(`${USD} USD is ${convertedCurrency.toFixed(2)} ${currency}`);
+      $('#convertedCurrency').text(`${USD} USD IS ${convertedCurrency.toFixed(2)} ${currency}`);
     } else {
-      $('#convertedCurrency').text(`But ${currency} is not a valid currency`);
+      $('#convertedCurrency').text(`BUT ${currency} IS NOT A VALID CURRENCY`);
     }
   } else {
-    $('.errorTest').text(`There was an error: ${response}`);
+    $('.errorTest').text(`THERE WAS AN ERROR: ${response}`);
   } 
 }
 

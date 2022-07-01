@@ -14,13 +14,31 @@ body {
 }
 
 #currencyConverter {
+  height: 80px;
   font-weight: bold;
+  border-radius: 6px;
   color: rgb(233, 184, 94);
   padding: 10px;
   padding-bottom: 5px;
   background-color: rgb(241, 219, 177);
-  width: 40%;
-  margin: 5%;
+  width: 80%;
+  margin: 10%;
+  display: block;
+}
+
+.outputBox {
+  text-align: center;
+  font-size: 20px;
+  height: 80px;
+  font-weight: 900;
+  border-radius: 6px;
+  color: rgb(233, 184, 94);
+  padding: 10px;
+  padding-bottom: 5px;
+  background-color: rgb(241, 219, 177);
+  width: 80%;
+  margin: 10%;
+  display: block;
 }
 
 input[type=text] {
@@ -29,7 +47,7 @@ input[type=text] {
   border: 0px;
   border-radius: 6px;
   background-color: rgb(233, 184, 94);
-  color: rgb(233, 184, 94);
+  color: rgb(241, 219, 177);
 }
 
 input[type=number] {
@@ -41,10 +59,36 @@ input[type=number] {
   color: rgb(241, 219, 177);
 }
 
+input[type=text]:focus {
+  width: 20%;
+  font-weight: bold;
+  outline: 2px solid rgb(233, 184, 94);
+  border-radius: 6px;
+  color: rgb(233, 184, 94);
+  background-color: rgb(241, 219, 177);
+}
+
+input[type=number]:focus {
+  width: 40%;
+  font-weight: bold;
+  outline: 2px solid rgb(233, 184, 94);
+  border-radius: 6px;
+  color: rgb(233, 184, 94);
+  background-color: rgb(241, 219, 177);
+}
+
 button {
   font-weight: bold;
   border: 0px;
   border-radius: 6px;
   background-color: rgb(169, 197, 169);
   color: rgb(225, 241, 225);
+}
+
+img {
+  position: fixed;
+  bottom: 0px;
+  width: 60%;
+  height: 60%;
+  left: 20%;
 }

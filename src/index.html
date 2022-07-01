@@ -4,16 +4,25 @@
 </head>
 <body>
   <h1 class="header">CURRENCY CONVERTER</h1>
+  <img src="../assets/images/handshake.png" alt="such a pup!">
   <div class="container">
-    <form id="currencyConverter">
-      <label for="USD">USD AMOUNT: </label>
-      <input type="number" id="USD" required>
-      <label for="currency">CURRENCY TO CONVERT TO: </label>
-      <input type="text" id="currency" required>
-      <button type="submit">SUBMIT</button>
-    </form>
-    <div class="errorTest"></div>
-    <div id="convertedCurrency"></div>
+    <div class="row">
+      <div class="col-6">
+        <form id="currencyConverter">
+          <label for="USD">USD AMOUNT: </label>
+          <input type="number" id="USD" required>
+          <label for="currency">CURRENCY TO CONVERT TO: </label>
+          <input type="text" id="currency" required>
+          <button type="submit">SUBMIT</button>
+        </form>
+      </div>
+      <div class="col-6">
+        <div class="outputBox">
+          <div class="errorTest"></div>
+          <div id="convertedCurrency"></div>
+        </div>
+      </div>
+    </div>
   </div>  
 </body>
 </html>
