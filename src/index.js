@@ -8,7 +8,7 @@ function getElements(response, currency, USD){
   if (response.result == 'success'){
     let currencyExists = checkCurrency(response, currency);
     $('.errorTest').text(`The call was a ${response.result}`);
-    if (currencyExists){
+    if (currencyExists) {
       let convertedCurrency = response.conversion_rates[currency] * USD;
       $('#convertedCurrency').text(`${USD} USD is ${convertedCurrency} ${currency}`);
     } else {
